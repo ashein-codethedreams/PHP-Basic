@@ -10,6 +10,7 @@ function showAge(){
  echo "age of ".$name." is ".$age. "<br>";
 }
 showAge();
+echo "<br>";
 
 //in php , local block also doesn't know global variables
 
@@ -18,6 +19,14 @@ function sayMyName($initial){
 }
 for($i=0;$i<10;$i++){
     sayMyName($i);
+}
+echo "<br>";
+//foreach is used for looping arrays and objects
+$arrays =["AMM","programmer","24"];
+echo "array count is ".count($arrays).".<br>";
+
+foreach($arrays as $array){
+    echo "$array ";
 }
 
 ?>
