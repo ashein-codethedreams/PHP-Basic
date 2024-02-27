@@ -22,12 +22,22 @@ for($i=0;$i<10;$i++){
 }
 echo "<br>";
 //foreach is used for looping arrays and objects
-$arrays =["AMM","programmer","24"];
+$arrays =["AMM","programmer","24"]; //numeric array
 echo "array count is ".count($arrays).".<br>";
 
 foreach($arrays as $array){
     echo "$array ";
 }
+echo "<br>";
 
+$myBio =[
+    "name"=>"AMM",
+    "job"=>"programmer",
+    "age"=>"24"
+] ;//associated array
+
+foreach($myBio as $key=>$detail){
+     echo "$key = $detail <br>";
+}
 ?>
 
