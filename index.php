@@ -3,7 +3,7 @@
 //class
 class Car
 {
-    private $name;
+    protected $name; //property
     function __construct($carName)
     {
         $this->name = $carName;
@@ -18,9 +18,20 @@ class Car
     }
 }
 
-//object
-$carObj = new Car("Lamborghini");
-$carObj->drive();
+//inheritance
+class Truck extends Car
+{
+    private $wheels;
+    function __construct($carName, $carWheels)
+    {
+        $this->name = $carName;
+        $this->wheels = $carWheels;
+    }
+    function wheels()
+    {
+        echo $this->name . " has " . $this->wheels . " wheels.";
+    }
+}
 
-$carObj2 = new Car("MarkII");
-$carObj2->stop();
+$truckObj = new Truck("Toyata", 4);
+$truckObj->wheels();
