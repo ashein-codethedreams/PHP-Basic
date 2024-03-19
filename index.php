@@ -1,37 +1,16 @@
 <?php
-
-//class
-class Car
+class Team
 {
-    protected $name; //property
-    function __construct($carName)
+    private $name;
+    function __construct($teamName)
     {
-        $this->name = $carName;
+        $this->name = $teamName;
     }
-    function drive()
-    {           //method
-        echo $this->name . " is driving... ";
-    }
-    function stop()
-    {           //method
-        echo $this->name . " stopped.";
+    function getTeamName()
+    {
+        return $this->name;
     }
 }
 
-//inheritance
-class Truck extends Car
-{
-    private $wheels;
-    function __construct($carName, $carWheels)
-    {
-        $this->name = $carName;
-        $this->wheels = $carWheels;
-    }
-    function wheels()
-    {
-        echo $this->name . " has " . $this->wheels . " wheels.";
-    }
-}
-
-$truckObj = new Truck("Toyata", 4);
-$truckObj->wheels();
+$teamObj = new Team("Manchester United");
+echo $teamObj->getTeamName();
