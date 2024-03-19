@@ -1,36 +1,7 @@
 <?php
-class Team
-{
-    private $name;
-    private $teamMembers = [];
-    function __construct($teamName)
-    {
-        $this->name = $teamName;
-    }
+include "test.php"; //"include" will work another lines even if file name incorrect
 
-    //static method
-    static function create($teamName)
-    {
-        return new static($teamName);
-    }
-    function getTeamName()
-    {
-        return $this->name;
-    }
-    function addTeamMember($member)
-    {
-        $this->teamMembers[] = $member;
-    }
-    function getTeamMembers()
-    {
-        return $this->teamMembers;
-    }
-}
-
-$teamObj = Team::create("Manchester United");  //object creation with static method
-echo $teamObj->getTeamName();
-
-$teamObj->addTeamMember("Bruno");
-$teamObj->addTeamMember("Garnocho");
-$teamObj->addTeamMember("Dalot");
-print_r($teamObj->getTeamMembers());
+require "array.php"; //"require" will work only when file name correct 
+require "basic.php";
+require "class.php";
+require "class_like_inlaravel.php";
