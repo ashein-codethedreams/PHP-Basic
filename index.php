@@ -7,6 +7,12 @@ class Team
     {
         $this->name = $teamName;
     }
+
+    //static method
+    static function create($teamName)
+    {
+        return new static($teamName);
+    }
     function getTeamName()
     {
         return $this->name;
@@ -21,7 +27,7 @@ class Team
     }
 }
 
-$teamObj = new Team("Manchester United");
+$teamObj = Team::create("Manchester United");  //object creation with static method
 echo $teamObj->getTeamName();
 
 $teamObj->addTeamMember("Bruno");
