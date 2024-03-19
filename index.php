@@ -1,5 +1,21 @@
-<?php 
-    require "test.php" ;//"require" will work only when file name correct
+<!DOCTYPE html>
+<html lang="en">
 
-    include "test.php" ;//"include" will work another lines even if file name incorrect
-?> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <?php
+        $username = "Hello";
+        if ($username == "Hello") {
+    ?>
+        <h1><?php echo $username ?> World</h1>
+    <?php
+        }
+    ?>
+</body>
+
+</html>
